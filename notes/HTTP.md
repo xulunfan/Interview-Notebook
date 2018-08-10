@@ -53,6 +53,7 @@
     * [可缓存](#可缓存)
     * [XMLHttpRequest](#xmlhttprequest)
 * [九、HTTP/1.0 与 HTTP/1.1 的区别](#九http10-与-http11-的区别)
+* [十、基于HTTP协议的接口](#基于http协议的接口)
 * [参考资料](#参考资料)
 <!-- GFM-TOC -->
 
@@ -222,6 +223,10 @@ CONNECT www.example.com:443 HTTP/1.1
 -  **403 Forbidden** ：请求被拒绝。
 
 -  **404 Not Found** 
+
+-  **406 Not Acceptable** 服务端不支持所需表示
+
+-  **409 Conflict**: 通用冲突
 
 ## 5XX 服务器错误
 
@@ -863,6 +868,21 @@ DELETE /idX/delete HTTP/1.1   -> Returns 404
 
 - HTTP/1.1 新增缓存处理指令 max-age
 
+# 十、基于HTTP协议的接口
+• GET读取,POST创建,PUT修改,DELETE删除
+• Form,query string传递参数
+• 常用语言有相应的软件库支持基于HTTP的通信
+• Python: requests
+• C/C++: libcurl/curlpp
+• Java: HttpsURLConnection 实现https请求
+• JavaScript: RESTful API/XMLHTTPRequest/jQuery/Node.js request
+实现
+• flask-restful
+例:创建一个新项目(JavaScript)
+jQuery.post(‘/api/projects’, {
+name: “New Project”,
+mod: “testing”
+})
 
 # 参考资料
 

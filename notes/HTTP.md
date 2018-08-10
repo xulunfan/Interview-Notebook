@@ -850,6 +850,7 @@ DELETE /idX/delete HTTP/1.1   -> Returns 404
 - 在使用 XMLHttpRequest 的 POST 方法时，浏览器会先发送 Header 再发送 Data。但并不是所有浏览器会这么做，例如火狐就不会。
 - 而 GET 方法 Header 和 Data 会一起发送。
 
+
 # 九、HTTP/1.0 与 HTTP/1.1 的区别
 
 > 详细内容请见上文
@@ -874,7 +875,7 @@ DELETE /idX/delete HTTP/1.1   -> Returns 404
 • 常用语言有相应的软件库支持基于HTTP的通信
 • Python: requests
 • C/C++: libcurl/curlpp
-• Java: HttpsURLConnection 实现https请求
+• Java: Servlet 使用URLConnection实现GET请求,使用HttpURLConnection实现POST请求,使用httpclient进行http通信
 • JavaScript: RESTful API/XMLHTTPRequest/jQuery/Node.js request
 实现
 • flask-restful
